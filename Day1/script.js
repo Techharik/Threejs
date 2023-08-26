@@ -1,8 +1,3 @@
-console.log(THREE)
-
-//?First Scene Creating
-
-
 const scene = new THREE.Scene();   //!container to put everything.
 
 //objects to put inside the scene:
@@ -28,7 +23,6 @@ const mesh = new THREE.Mesh(geometry,material) //?mesh is composed of geomentry 
 
 //Add scene:
 scene.add(mesh)
-
 //Camera : Point of View - we need to provide the position of the camera.
 
 //going to use perspectiveCamera
@@ -41,7 +35,7 @@ const sizes ={
 
 const camera  = new THREE.PerspectiveCamera(45,sizes.width/sizes.height)  //degree - aspect ration
 camera.position.z = 3 // moving backward camera
-// camera.scale.y =3
+camera.scale.z = 1
 //Renderer - render the scene through camera point of view:
 
 const canvas = document.querySelector('.webql')
@@ -56,7 +50,7 @@ renderer.setSize(sizes.width,sizes.height)
 
 renderer.render(scene,camera) //we are inside the traniagle so we can see only black canvas
 
-//?to transform object we use properties
+//?  to transform object we use properties:
 // position, rotation , scale :- postion - x,x, z axis
 
 
